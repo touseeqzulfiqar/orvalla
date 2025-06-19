@@ -1,10 +1,11 @@
+import { HeaderShownContext } from '@react-navigation/elements'
 import { Stack } from 'expo-router'
 import React from 'react'
 import { StyleSheet } from 'react-native'
 
 const _layout = () => {
   return (
-    <Stack screenOptions={{headerShown: false}}></Stack>
+    <Stack screenOptions={HeaderShown: false}></Stack>
   )
 }
 
