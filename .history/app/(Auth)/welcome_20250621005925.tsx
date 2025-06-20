@@ -107,9 +107,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   getStartedButton: {
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    borderRadius: 15,
+    paddingVertical: 20,
+    paddingHorizontal: 0,
+    borderRadius: 25,
     backgroundColor: colors.primary,
     width: "80%",
     alignSelf: "center",

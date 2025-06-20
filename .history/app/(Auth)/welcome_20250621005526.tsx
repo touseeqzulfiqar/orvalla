@@ -9,13 +9,13 @@ import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 const Welcome = () => {
   const handleLoginPress = () => {
     console.log("Login Pressed");
-    // TODO: Navigate to login screen
+    // navigate to login screen if needed
   };
 
   return (
     <ScreenWrapper>
       <View style={styles.container}>
-        {/* Top Right Sign In Button */}
+        {/* Top Right Login Button */}
         <TouchableOpacity onPress={handleLoginPress} style={styles.loginButton}>
           <Typo size={16} fontWeight="500" color={colors.primary}>
             Sign In
@@ -29,28 +29,29 @@ const Welcome = () => {
           resizeMode="contain"
         />
 
-        {/* Motivational Text */}
-        <View style={styles.centerAlign}>
-          <Typo
-            size={30}
-            fontWeight="800"
-            style={styles.italicText}
-            color={colors.white}
-          >
-            Always Take Control
-          </Typo>
-          <Typo
-            size={30}
-            fontWeight="800"
-            style={styles.italicText}
-            color={colors.white}
-          >
-            Of Your Finances
-          </Typo>
+        {/* Footer Text */}
+        <View>
+          <View style={{ alignItems: "center" }}>
+            <Typo
+              size={30}
+              fontWeight="800"
+              style={{ fontStyle: "italic" }}
+              color={colors.white}
+            >
+              Always Take Control
+            </Typo>
+            <Typo
+              size={30}
+              fontWeight="800"
+              style={{ fontStyle: "italic" }}
+              color={colors.white}
+            >
+              Of Your Finances
+            </Typo>
+          </View>
         </View>
-
-        {/* Supporting Text */}
-        <View style={styles.centerAlign}>
+        {/* Footer Text */}
+        <View style={{ alignItems: "center", gap: 2 }}>
           <Typo size={17} color={colors.textLight}>
             Always Take Control
           </Typo>
@@ -58,15 +59,22 @@ const Welcome = () => {
             Of Your Finances
           </Typo>
         </View>
-
-        {/* Get Started Button */}
+        {/* button */}
         <View style={styles.buttonContainer}>
           <Button
             onPress={handleLoginPress}
             color={colors.primary}
-            style={styles.getStartedButton}
+            style={{
+              padding: spacingY._5,
+              borderRadius: 25,
+              backgroundColor: colors.primary,
+              width: "80%",
+              alignSelf: "center",
+              marginBottom: 20,
+              shadowColor: "#000",
+            }}
           >
-            <Typo size={16} fontWeight="800" color={colors.white} style={{fontStyle: 'italic'}}>
+            <Typo size={16} fontWeight="800" color={colors.white}>
               Get Started
             </Typo>
           </Button>
@@ -96,22 +104,20 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: verticalScale(50),
   },
-  centerAlign: {
-    alignItems: "center",
-    gap: 2,
-  },
-  italicText: {
+  footer: {
     fontStyle: "italic",
+    backgroundColor: colors.neutral900,
+    alignItems: "center",
+    paddingVertical: verticalScale(30),
+    gap: spacingY._20,
+    shadowColor: "#fff",
+    shadowOffset: {
+      width: 0,
+      height: -10,
+    },
+    shadowOpacity: 0.15,
+    shadowRadius: 25,
+    elevation: 10,
   },
-  buttonContainer: {
-    marginBottom: 20,
-  },
-  getStartedButton: {
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    borderRadius: 15,
-    backgroundColor: colors.primary,
-    width: "80%",
-    alignSelf: "center",
-  },
+  buttonContainer: {},
 });

@@ -66,7 +66,7 @@ const Welcome = () => {
             color={colors.primary}
             style={styles.getStartedButton}
           >
-            <Typo size={16} fontWeight="800" color={colors.white} style={{fontStyle: 'italic'}}>
+            <Typo size={16} fontWeight="800" color={colors.white}>
               Get Started
             </Typo>
           </Button>
@@ -107,9 +107,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   getStartedButton: {
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    borderRadius: 15,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 25,
     backgroundColor: colors.primary,
     width: "80%",
     alignSelf: "center",
