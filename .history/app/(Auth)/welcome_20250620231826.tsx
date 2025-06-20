@@ -15,19 +15,14 @@ const Welcome = () => {
               SignIn
             </Typo>
             </TouchableOpacity>
-          </View>
             <Image
               source={require('../../assets/images/welcome.png')}
               style={styles.welcomeImage}
               resizeMode="contain"
             />
-          {/* Footer */}
-          <View style={styles.footer}>
-            <View style={{alignItems: 'center'}}>
-                <Typo size={30} fontWeight={'800'}>Always Take Control</Typo>
-                <Typo size={30} fontWeight={'800'}>Always Take Control</Typo>
-            </View>
           </View>
+          {/* Footer */}
+          <View style={styles.footer}></View>
       </View>
     </ScreenWrapper>
   );

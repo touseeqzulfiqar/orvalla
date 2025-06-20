@@ -24,8 +24,12 @@ const Welcome = () => {
           {/* Footer */}
           <View style={styles.footer}>
             <View style={{alignItems: 'center'}}>
-                <Typo size={30} fontWeight={'800'}>Always Take Control</Typo>
-                <Typo size={30} fontWeight={'800'}>Always Take Control</Typo>
+              <Typo size={24} fontWeight={'700'} color={colors.neutral100}>
+                Welcome to Our App
+              </Typo>
+              <Typo size={16} fontWeight={'400'} color={colors.neutral300} style={{marginTop: spacingY._10}}>
+                Discover amazing features and get started now!
+              </Typo>
             </View>
           </View>
       </View>

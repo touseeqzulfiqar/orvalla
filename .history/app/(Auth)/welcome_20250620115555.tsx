@@ -21,13 +21,6 @@ const Welcome = () => {
               style={styles.welcomeImage}
               resizeMode="contain"
             />
-          {/* Footer */}
-          <View style={styles.footer}>
-            <View style={{alignItems: 'center'}}>
-                <Typo size={30} fontWeight={'800'}>Always Take Control</Typo>
-                <Typo size={30} fontWeight={'800'}>Always Take Control</Typo>
-            </View>
-          </View>
       </View>
     </ScreenWrapper>
   );
@@ -45,6 +38,8 @@ const styles = StyleSheet.create({
     width: '100%',
     height: verticalScale(300),
     alignSelf: 'center',
+    itemAlign: 'center',
+    resizeMode: 'contain',
     marginTop: verticalScale(100),
   },
   loginButton:{

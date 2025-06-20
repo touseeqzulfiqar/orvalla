@@ -24,8 +24,7 @@ const Welcome = () => {
           {/* Footer */}
           <View style={styles.footer}>
             <View style={{alignItems: 'center'}}>
-                <Typo size={30} fontWeight={'800'}>Always Take Control</Typo>
-                <Typo size={30} fontWeight={'800'}>Always Take Control</Typo>
+                <Typo style={}>Always Take Control</Typo>
             </View>
           </View>
       </View>
