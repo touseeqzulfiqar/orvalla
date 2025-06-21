@@ -25,7 +25,7 @@ const Welcome = () => {
 
         {/* Welcome Image */}
         <Animated.Image
-        entering={FadeIn.duration(500)}
+        entering={FadeIn}
           source={require("../../assets/images/welcome.png")}
           style={styles.welcomeImage}
           resizeMode="contain"

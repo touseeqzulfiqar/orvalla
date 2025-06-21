@@ -4,8 +4,7 @@ import { colors, spacingX, spacingY } from "@/constants/theme";
 import { verticalScale } from "@/utils/styling";
 import { Button } from "@react-navigation/elements";
 import React from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
-import Animated, { FadeIn } from "react-native-reanimated";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
 const Welcome = () => {
   const handleLoginPress = () => {
@@ -24,8 +23,7 @@ const Welcome = () => {
         </TouchableOpacity>
 
         {/* Welcome Image */}
-        <Animated.Image
-        entering={FadeIn.duration(500)}
+        <Image
           source={require("../../assets/images/welcome.png")}
           style={styles.welcomeImage}
           resizeMode="contain"
