@@ -66,7 +66,7 @@ const Welcome = () => {
         {/* Get Started Button */}
         <View style={styles.buttonContainer}>
           <Button
-            onPress={()=> router.push('/(Auth)/register')}
+            onPress={handleLoginPress}
             color={colors.primary}
             style={styles.getStartedButton}
           >

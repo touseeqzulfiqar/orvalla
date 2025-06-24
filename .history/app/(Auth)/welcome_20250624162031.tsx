@@ -3,13 +3,11 @@ import Typo from "@/components/Typo";
 import { colors, spacingX, spacingY } from "@/constants/theme";
 import { verticalScale } from "@/utils/styling";
 import { Button } from "@react-navigation/elements";
-import { useRouter } from "expo-router";
 import React from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
 
 const Welcome = () => {
-  const router = useRouter();
   const handleLoginPress = () => {
     console.log("Login Pressed");
     // TODO: Navigate to login screen
@@ -19,7 +17,7 @@ const Welcome = () => {
     <ScreenWrapper>
       <View style={styles.container}>
         {/* Top Right Sign In Button */}
-        <TouchableOpacity onPress={()=> router.push('/(Auth)/login')} style={styles.loginButton}>
+        <TouchableOpacity onPress={handleLoginPress} style={styles.loginButton}>
           <Typo size={16} fontWeight="500" color={colors.primary}>
             Sign In
           </Typo>
@@ -66,7 +64,7 @@ const Welcome = () => {
         {/* Get Started Button */}
         <View style={styles.buttonContainer}>
           <Button
-            onPress={()=> router.push('/(Auth)/register')}
+            onPress={handleLoginPress}
             color={colors.primary}
             style={styles.getStartedButton}
           >

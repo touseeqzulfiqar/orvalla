@@ -19,7 +19,7 @@ const Welcome = () => {
     <ScreenWrapper>
       <View style={styles.container}>
         {/* Top Right Sign In Button */}
-        <TouchableOpacity onPress={()=> router.push('/(Auth)/login')} style={styles.loginButton}>
+        <TouchableOpacity onPress={handleLoginPress} style={styles.loginButton}>
           <Typo size={16} fontWeight="500" color={colors.primary}>
             Sign In
           </Typo>
@@ -66,7 +66,7 @@ const Welcome = () => {
         {/* Get Started Button */}
         <View style={styles.buttonContainer}>
           <Button
-            onPress={()=> router.push('/(Auth)/register')}
+            onPress={handleLoginPress}
             color={colors.primary}
             style={styles.getStartedButton}
           >
