@@ -1,15 +1,22 @@
 import ScreenWrapper from '@/components/screenWrapper'
+import Typo from '@/components/Typo'
 import { colors, spacingY } from '@/constants/theme'
 import { verticalScale } from '@/utils/styling'
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet } from 'react-native'
+import { View } from 'react-native-reanimated/lib/typescript/Animated'
 
 const Login = () => {
   return (
     <ScreenWrapper>
         <View style={styles.container}>
-
-        </View>
+            <Typo size={20} fontWeight="bold" style={styles.welcomeText}>
+                Welcome Back
+            </Typo>
+            <View style={styles.form}>
+                </View>
+                </View>
+    
     </ScreenWrapper>
   )
 }
