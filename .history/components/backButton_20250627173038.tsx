@@ -29,10 +29,9 @@ const styles = StyleSheet.create({
     button: {
        backgroundColor: colors.neutral600,
        alignSelf: 'flex-start',
-       borderRadius: radius._15,
-       padding: verticalScale(8),
-       borderCurve: 'continuous',
-       marginLeft: verticalScale(5),
+       borderRadius: radius._12,
+         padding: verticalScale(8),
+
 
     },
 })

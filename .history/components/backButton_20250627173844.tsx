@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
        borderRadius: radius._15,
        padding: verticalScale(8),
        borderCurve: 'continuous',
-       marginLeft: verticalScale(5),
+       marginLeft: verticalScale(10),
 
     },
 })

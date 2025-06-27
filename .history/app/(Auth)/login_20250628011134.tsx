@@ -5,26 +5,17 @@ import ScreenWrapper from "@/components/screenWrapper";
 import Typo from "@/components/Typo";
 import { colors, spacingY } from "@/constants/theme";
 import { verticalScale } from "@/utils/styling";
-import { useRouter } from "expo-router";
 import * as Icons from "phosphor-react-native";
 import React, { useRef, useState } from "react";
 import { Pressable, StyleSheet, View } from "react-native";
 
-const Register = () => {
-  const router = useRouter();
+const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
-  const nameRef = useRef("");
   const [isLoading, setIsLoading] = useState(false);
   // Function to handle login logic can be added here
   const handleSubmit = async () => {
     setIsLoading(true);
-    if(!emailRef.current || !passwordRef.current || !nameRef.current) {
-        alert("Please fill in all fields");
-      console.log("Please fill in all fields");
-        setIsLoading(false);
-        return;
-    }
     // Logic to handle login
     console.log("Email:", emailRef.current);
     console.log("Password:", passwordRef.current);
@@ -40,23 +31,18 @@ const Register = () => {
         <BackButton iconSize={28} />
         <View style={{ gap: 5, marginTop: spacingY._20 }}>
           <Typo size={30} fontWeight={"800"}>
-            Lets,
+            Hey,
           </Typo>
           <Typo size={30} fontWeight={"800"}>
-            Get Started
+            Welcome Back
           </Typo>
         </View>
         {/* Form */}
         <View style={styles.form}>
           <Typo size={16} color={colors.textLighter}>
-            SignUp to track your expenses
+            Login to track your expenses
           </Typo>
           {/* Inputs */}
-          <Input
-            onChangeText={(text) => (nameRef.current = text)}
-            placeholder="Enter your Name"
-            icon={<Icons.User size={20} color={colors.neutral300} />}
-          />
           <Input
             onChangeText={(text) => (emailRef.current = text)}
             placeholder="Enter your email"
@@ -76,7 +62,7 @@ const Register = () => {
             color="black"
             style={{ fontStyle: "italic" }}
           >
-            SignUp
+            Login
           </Typo>
         </Button>
 
@@ -84,29 +70,21 @@ const Register = () => {
 
         <View style={styles.footer}>
           <Typo size={16} color={colors.textLighter}>
-            Already have an account?
+            Forgot your password?
           </Typo>
           <Pressable
             onPress={() => {
-              router.push("/(Auth)/login");
+              // Logic to handle forgot password
+              console.log("Forgot Password Pressed");
             }}
-          >
-            <Typo
-              size={16}
-              fontWeight={"700"}
-              color={colors.primary}
-              style={{ fontStyle: "italic" }}
-            >
-              LogIn
-            </Typo>
-          </Pressable>
+            />
         </View>
       </View>
     </ScreenWrapper>
   );
 };
 
-export default Register;
+export default Login;
 
 const styles = StyleSheet.create({
   container: {

@@ -53,7 +53,7 @@ const Register = () => {
           </Typo>
           {/* Inputs */}
           <Input
-            onChangeText={(text) => (nameRef.current = text)}
+            onChangeText={(text) => (emailRef.current = text)}
             placeholder="Enter your Name"
             icon={<Icons.User size={20} color={colors.neutral300} />}
           />
@@ -84,11 +84,11 @@ const Register = () => {
 
         <View style={styles.footer}>
           <Typo size={16} color={colors.textLighter}>
-            Already have an account?
+            Forgot your password?
           </Typo>
           <Pressable
             onPress={() => {
-              router.push("/(Auth)/login");
+              router.push("/(Auth)/register");
             }}
           >
             <Typo
@@ -97,7 +97,7 @@ const Register = () => {
               color={colors.primary}
               style={{ fontStyle: "italic" }}
             >
-              LogIn
+              SignUp
             </Typo>
           </Pressable>
         </View>

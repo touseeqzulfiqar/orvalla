@@ -53,7 +53,7 @@ const Register = () => {
           </Typo>
           {/* Inputs */}
           <Input
-            onChangeText={(text) => (nameRef.current = text)}
+            onChangeText={(text) => (emailRef.current = text)}
             placeholder="Enter your Name"
             icon={<Icons.User size={20} color={colors.neutral300} />}
           />
